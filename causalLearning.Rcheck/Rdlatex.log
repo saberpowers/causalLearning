@@ -1,0 +1,414 @@
+Hmm ... looks like a package
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./Rd2.tex
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/zi4.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+No file Rd2.aux.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1phv.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [1{/usr/local/texl
+ive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 59--61
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 76--79
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 118--121
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+[2] (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 184--186
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+[3]
+Overfull \hbox (18.37787pt too wide) in paragraph at lines 200--202
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set treat-ment in-di-ca-tors (o
+nly used if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (1.4584pt too wide) in paragraph at lines 203--205
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set re-sponse val-ues (only use
+d if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 215--218
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+[4] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 298--301
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+[5] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/ts1zi4.fd) [6]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [7]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [8]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.82864pt too wide) in paragraph at lines 542--544
+[]\T1/ptm/m/n/10 option vec-tor of new treat-ment as-sign-ments (only used if \
+T1/zi4/m/n/10 type = \TS1/zi4/m/n/10 '\T1/zi4/m/n/10 individual\TS1/zi4/m/n/10 
+'\T1/ptm/m/n/10 ) 
+[9] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [10]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [11]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+No file Rd2.ind.
+[12] (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2014/te
+xmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/local/texlive/2014/texmf-
+dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/
+dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (12 pages, 88758 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2014] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (14 entries accepted, 0 rejected).
+Sorting entries....done (46 comparisons).
+Generating output file Rd2.ind....done (27 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./Rd2.tex
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/zi4.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [1{/usr/local/texl
+ive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 59--61
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 76--79
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [2]
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 118--121
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [3]
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 184--186
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+
+Overfull \hbox (18.37787pt too wide) in paragraph at lines 200--202
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set treat-ment in-di-ca-tors (o
+nly used if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (1.4584pt too wide) in paragraph at lines 203--205
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set re-sponse val-ues (only use
+d if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 215--218
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+[4] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [5]
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 298--301
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [6]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/ts1zi4.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [7]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [8]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.82864pt too wide) in paragraph at lines 542--544
+[]\T1/ptm/m/n/10 option vec-tor of new treat-ment as-sign-ments (only used if \
+T1/zi4/m/n/10 type = \TS1/zi4/m/n/10 '\T1/zi4/m/n/10 individual\TS1/zi4/m/n/10 
+'\T1/ptm/m/n/10 ) 
+[9] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [10]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [11]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) (./Rd2.ind
+[12] [13]) (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2014/te
+xmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/local/texlive/2014/texmf-
+dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/
+dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (13 pages, 91409 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2014] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (14 entries accepted, 0 rejected).
+Sorting entries....done (46 comparisons).
+Generating output file Rd2.ind....done (27 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./Rd2.tex
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/zi4.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [1{/usr/local/texl
+ive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 59--61
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 76--79
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [2]
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 118--121
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [3]
+Overfull \hbox (4.54831pt too wide) in paragraph at lines 184--186
+[]\T1/ptm/m/n/10 maximum num-ber of terms to in-clude in the re-gres-sion ba-si
+s (e.g. \T1/zi4/m/n/10 maxterms = 11
+
+Overfull \hbox (18.37787pt too wide) in paragraph at lines 200--202
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set treat-ment in-di-ca-tors (o
+nly used if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (1.4584pt too wide) in paragraph at lines 203--205
+[]\T1/ptm/m/n/10 optional vec-tor of validation-set re-sponse val-ues (only use
+d if \T1/zi4/m/n/10 backstep = TRUE\T1/ptm/m/n/10 ) 
+
+Overfull \hbox (20.81804pt too wide) in paragraph at lines 215--218
+\T1/ptm/m/n/10 needed to es-ti-mate re-gres-sion co-ef-fi-cients for ba-sis (on
+ly used if \T1/zi4/m/n/10 propensity = TRUE\T1/ptm/m/n/10 ) 
+[4] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [5]
+Overfull \hbox (40.76804pt too wide) in paragraph at lines 298--301
+[]\T1/ptm/m/n/10 how far apart should the can-di-date splits be for the causal 
+trees? (e.g. \T1/zi4/m/n/10 splitSpread = 0.1\T1/ptm/m/n/10 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [6]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/inconsolata/ts1zi4.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [7]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [8]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.82864pt too wide) in paragraph at lines 542--544
+[]\T1/ptm/m/n/10 option vec-tor of new treat-ment as-sign-ments (only used if \
+T1/zi4/m/n/10 type = \TS1/zi4/m/n/10 '\T1/zi4/m/n/10 individual\TS1/zi4/m/n/10 
+'\T1/ptm/m/n/10 ) 
+[9] (/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [10]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) [11]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def) (./Rd2.ind
+[12] [13]) (./Rd2.aux) )
+(see the transcript file for additional information){/usr/local/texlive/2014/te
+xmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/local/texlive/2014/texmf-
+dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/
+dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (13 pages, 92329 bytes).
+Transcript written on Rd2.log.
+Saving output to 'causalLearning-manual.pdf' ...
+Done
+You may want to clean up by 'rm -rf /var/folders/f4/l5k7t0ws2tgfq_51rg_dzs2m0000gn/T//Rtmpru4THo/Rd2pdf523c42467bcd'

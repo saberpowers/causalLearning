@@ -1,0 +1,26 @@
+PTOforest               Fit a pollinated transformed outcome (PTO)
+                        forest model
+bagged.causalMARS       Fit a bag of causal MARS models
+causalBoosting          Fit a causal boosting model
+causalMARS              Fit a causal MARS model
+cv.causalBoosting       Fit a causal boosting model with cross
+                        validation
+pollinated.ranger       Pollinate a fitted ranger random forest model
+predict.PTOforest       Make predictions from a fitted PTO forest model
+predict.bagged.causalMARS
+                        Make predictions from a bag of fitted causal
+                        MARS models
+predict.causalBoosting
+                        Make predictions from a fitted causal boosting
+                        model
+predict.causalMARS      Make predictions from a fitted causal MARS
+                        model
+predict.causalTree      Make predictions from a fitted causal tree
+                        model
+predict.cv.causalBoosting
+                        Make predictions from a fitted cross-validated
+                        causal boosting model
+predict.pollinated.ranger
+                        Make predictions from a pollinated ranger
+                        random forest model
+stratify                Get propensity strata from propensity scores

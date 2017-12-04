@@ -1,0 +1,25 @@
+Package: causalLearning
+Title: Methods for heterogeneous treatment effect estimation
+Version: 1.0.0
+Authors@R: c(
+  person("Scott", "Powers", email = "sspowers@stanford.edu",
+    role = c("aut", "cre")),
+  person("Junyang", "Qian", email = "junyangq@stanford.edu", role = "aut"),
+  person("Trevor", "Hastie", email = "hastie@stanford.edu", role = "aut"),
+  person("Robert", "Tibshirani", email = "tibs@stanford.edu", role = "aut"))
+Description: The main functions are cv.causalBoosting and bagged.causalMARS,
+  which build upon the simpler causalBoosting and causalMARS functions. All of
+  these functions have their own predict methods.
+Depends: R (>= 3.3.0)
+Imports: ranger
+License: GPL-2
+LazyData: true
+RoxygenNote: 6.0.1
+NeedsCompilation: yes
+Packaged: 2017-12-04 05:15:37 UTC; sspowers
+Author: Scott Powers [aut, cre],
+  Junyang Qian [aut],
+  Trevor Hastie [aut],
+  Robert Tibshirani [aut]
+Maintainer: Scott Powers <sspowers@stanford.edu>
+Built: R 3.3.2; x86_64-apple-darwin13.4.0; 2017-12-04 05:15:44 UTC; unix
