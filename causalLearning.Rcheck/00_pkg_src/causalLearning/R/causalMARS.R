@@ -204,8 +204,7 @@ causalMARS = function(x, tx, y,
                 res1[stratum == s & tx == 1] = myridge(bx[tx == 1 & stratum == 
                   s, ], r[tx == 1 & stratum == s])$res
                 }
-                scor = scor + stratum.sizes[s] * (sum(res^2) - sum(res0^2) - 
-                sum(res1^2))
+                scor = scor + (sum(res^2) - sum(res0^2) - sum(res1^2))
                 
               }
               res0 = res0[tx == 0]
@@ -320,19 +319,15 @@ causalMARS = function(x, tx, y,
           for (s in 1:nstratum) {
             res0 = res1 = 0
             if (sum(tx == 0 & stratum == s) >= minnum) {
-              fit0 = myridge(
-                modmatrix[, active2, drop = FALSE][tx == 0 & stratum == s, ],
-                y[tx == 0 & stratum == s], int = TRUE)
+              fit0 = myridge(modmatrix[, active2, drop = FALSE][tx == 0 & stratum == 
+              s, ], y[tx == 0 & stratum == s], int = TRUE)
               res0 = fit0$res
             }
             if (sum(tx == 1 & stratum == s) >= minnum) {
-              fit1 = myridge(
-                modmatrix[, active2, drop = FALSE][tx == 1 & stratum == s, ],
-                y[tx == 1 & stratum == s], int = TRUE)
+              fit1 = myridge(modmatrix[, active2, drop = FALSE][tx == 1 & stratum == 
+              s, ], y[tx == 1 & stratum == s], int = TRUE)
               res1 = fit1$res
             }
-#            rss0sq = rss0sq + stratum.sizes[s] * sum(res0^2)
-#            rss1sq = rss1sq + stratum.sizes[s] * sum(res1^2)
             rss0sq = rss0sq + sum(res0^2)
             rss1sq = rss1sq + sum(res1^2)
             
@@ -350,8 +345,6 @@ causalMARS = function(x, tx, y,
               1 & stratum.val == s, ]) %*% fit1$coef
               res1test = (y.val[tx.val == 1 & stratum.val == s] - yhat1)
             }
-#            rss0testsq = rss0testsq + stratum.val.sizes[s] * sum(res0test^2)
-#            rss1testsq = rss1testsq + stratum.val.sizes[s] * sum(res1test^2)
             rss0testsq = rss0testsq + sum(res0test^2)
             rss1testsq = rss1testsq + sum(res1test^2)
           }
@@ -407,8 +400,8 @@ causalMARS = function(x, tx, y,
             res11 = fit11$res
             }
             
-            rss00sq = rss00sq + stratum.sizes[s] * sum(res00^2)
-            rss11sq = rss11sq + stratum.sizes[s] * sum(res11^2)
+            rss00sq = rss00sq + sum(res00^2)
+            rss11sq = rss11sq + sum(res11^2)
             
             # try deleting the same test set term
             
@@ -425,8 +418,8 @@ causalMARS = function(x, tx, y,
             res11test = (y.val[tx.val == 1 & stratum.val == s] - yhat11)
             }
             
-            rss00testsq = rss00testsq + stratum.val.sizes[s] * sum(res00test^2)
-            rss11testsq = rss11testsq + stratum.val.sizes[s] * sum(res11test^2)
+            rss00testsq = rss00testsq + sum(res00test^2)
+            rss11testsq = rss11testsq + sum(res11test^2)
 
           }
           delta[k] = (rss00sq + rss11sq - rss0sq - rss1sq)/(rss00sq + rss11sq)

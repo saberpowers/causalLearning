@@ -16,10 +16,10 @@ License: GPL-2
 LazyData: true
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2017-12-04 05:15:37 UTC; sspowers
+Packaged: 2017-12-04 05:58:47 UTC; sspowers
 Author: Scott Powers [aut, cre],
   Junyang Qian [aut],
   Trevor Hastie [aut],
   Robert Tibshirani [aut]
 Maintainer: Scott Powers <sspowers@stanford.edu>
-Built: R 3.3.2; x86_64-apple-darwin13.4.0; 2017-12-04 05:15:44 UTC; unix
+Built: R 3.3.2; x86_64-apple-darwin13.4.0; 2017-12-04 05:58:56 UTC; unix

@@ -16,7 +16,7 @@ License: GPL-2
 LazyData: true
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2017-12-04 05:15:37 UTC; sspowers
+Packaged: 2017-12-04 05:58:47 UTC; sspowers
 Author: Scott Powers [aut, cre],
   Junyang Qian [aut],
   Trevor Hastie [aut],

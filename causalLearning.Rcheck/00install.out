@@ -2,7 +2,7 @@
 ** libs
 clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c causalBoosting.c -o causalBoosting.o
 clang -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o causalLearning.so causalBoosting.o -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
-installing to /Users/sspowers/Dropbox/stanford/research/personalized-predictions/code/causalLearning/causalLearning.Rcheck/causalLearning/libs
+installing to /Users/sspowers/GitHub/causalLearning/causalLearning.Rcheck/causalLearning/libs
 ** R
 ** preparing package for lazy loading
 ** help
