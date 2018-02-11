@@ -42,7 +42,7 @@
 #'y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
 #'
 #'# Estimate causal boosting model with cross-validation
-#'fit_cv = causalLearning::cv.causalBoosting(x, tx, y)
+#'fit_cv = cv.causalBoosting(x, tx, y)
 #'fit_cv$num.trees.min.effect # number of trees chosen by cross-validation
 #'pred_cv = predict(fit_cv, newx = x)
 #'

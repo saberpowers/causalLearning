@@ -35,7 +35,7 @@
 #'y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
 #'
 #'# Estimate bagged causal MARS model
-#'fit_bcm = causalLearning::bagged.causalMARS(x, tx, y, nbag = 10)
+#'fit_bcm = bagged.causalMARS(x, tx, y, nbag = 10)
 #'pred_bcm = predict(fit_bcm, newx = x)
 #'
 #'# Visualize results

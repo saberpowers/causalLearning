@@ -83,7 +83,7 @@
 #'y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
 #'
 #'# Estimate causal MARS model
-#'fit_cm = causalLearning::causalMARS(x, tx, y)
+#'fit_cm = causalMARS(x, tx, y)
 #'pred_cm = predict(fit_cm, newx = x)
 #'
 #'# Visualize results
