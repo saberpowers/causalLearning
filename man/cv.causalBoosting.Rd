@@ -54,3 +54,26 @@ an object of class \code{cv.causalBoosting} which is an object of
 \description{
 Fit a causal boosting model with cross validation
 }
+\examples{
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate causal boosting model with cross-validation
+fit_cv = causalLearning::cv.causalBoosting(x, tx, y)
+fit_cv$num.trees.min.effect # number of trees chosen by cross-validation
+pred_cv = predict(fit_cv, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_cv, main = 'Causal boosting w/ CV',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+}

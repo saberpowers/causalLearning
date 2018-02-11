@@ -22,6 +22,27 @@
 #' @return an object of class \code{bagged.causalMARS}, which is itself a list
 #'  of \code{causalMARS} objects
 #'
+#' @examples
+#'# Randomized experiment example
+#'
+#'n = 100 # number of training-set patients to simulate
+#'p = 10  # number of features for each training-set patient
+#'
+#'# Simulate data
+#'x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+#'tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+#'tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+#'y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+#'
+#'# Estimate bagged causal MARS model
+#'fit_bcm = causalLearning::bagged.causalMARS(x, tx, y, nbag = 10)
+#'pred_bcm = predict(fit_bcm, newx = x)
+#'
+#'# Visualize results
+#'plot(tx_effect, pred_bcm, main = 'Bagged causal MARS',
+#'  xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+#'abline(0, 1, lty = 2)
+#'
 #' @export
 
 bagged.causalMARS = function(x, tx, y, nbag = 20, maxterms = 11, nquant = 5,

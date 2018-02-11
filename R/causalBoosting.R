@@ -37,6 +37,31 @@
 #'    \item num.trees: number of trees specified by function call
 #'  }
 #'
+#' @details
+#'  This function exists primarily to be called by cv.causalBoosting because
+#'  the num.trees parameter generally needs to be tuned via cross-validation.
+#'
+#' @examples
+#'# Randomized experiment example
+#'
+#'n = 100 # number of training-set patients to simulate
+#'p = 10  # number of features for each training-set patient
+#'
+#'# Simulate data
+#'x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+#'tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+#'tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+#'y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+#'
+#'# Estimate causal boosting model
+#'fit_cb = causalBoosting(x, tx, y, num.trees = 500)
+#'pred_cb = predict(fit_cb, newx = x, num.trees = 500)
+#'
+#'# Visualize results
+#'plot(tx_effect, pred_cb, main = 'Causal boosting',
+#'  xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+#'abline(0, 1, lty = 2)
+#'
 #' @export
 
 causalBoosting = function(x, tx, y, num.trees = 500, maxleaves = 4, eps = 0.01,

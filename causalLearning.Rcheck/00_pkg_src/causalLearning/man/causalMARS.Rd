@@ -98,3 +98,25 @@ parallel arms mars with backward stepwise BOTH randomized case and
  selecting a member of the sequence. active2 contains indices of columns with
  nonzero norm
 }
+\examples{
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate causal MARS model
+fit_cm = causalLearning::causalMARS(x, tx, y)
+pred_cm = predict(fit_cm, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_cm, main = 'Causal MARS',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+}

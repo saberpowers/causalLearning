@@ -43,3 +43,25 @@ an object of class \code{PTOforest} with attributes:
 \description{
 Fit a pollinated transformed outcome (PTO) forest model
 }
+\examples{
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate PTO forest model
+fit_pto = PTOforest(x, tx, y)
+pred_pto = predict(fit_pto, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_pto, main = 'PTO forest',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+}
