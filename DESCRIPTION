@@ -2,7 +2,7 @@ Package: causalLearning
 Title: Methods for heterogeneous treatment effect estimation
 Version: 1.0.0
 Authors@R: c(
-  person("Scott", "Powers", email = "sspowers@stanford.edu",
+  person("Scott", "Powers", email = "saberpowers@gmail.com",
     role = c("aut", "cre")),
   person("Junyang", "Qian", email = "junyangq@stanford.edu", role = "aut"),
   person("Trevor", "Hastie", email = "hastie@stanford.edu", role = "aut"),

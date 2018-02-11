@@ -1,0 +1,193 @@
+pkgname <- "causalLearning"
+source(file.path(R.home("share"), "R", "examples-header.R"))
+options(warn = 1)
+library('causalLearning')
+
+base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+cleanEx()
+nameEx("PTOforest")
+### * PTOforest
+
+flush(stderr()); flush(stdout())
+
+### Name: PTOforest
+### Title: Fit a pollinated transformed outcome (PTO) forest model
+### Aliases: PTOforest
+
+### ** Examples
+
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate PTO forest model
+fit_pto = PTOforest(x, tx, y)
+pred_pto = predict(fit_pto, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_pto, main = 'PTO forest',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+
+
+
+cleanEx()
+nameEx("bagged.causalMARS")
+### * bagged.causalMARS
+
+flush(stderr()); flush(stdout())
+
+### Name: bagged.causalMARS
+### Title: Fit a bag of causal MARS models
+### Aliases: bagged.causalMARS
+
+### ** Examples
+
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate bagged causal MARS model
+fit_bcm = causalLearning::bagged.causalMARS(x, tx, y, nbag = 10)
+pred_bcm = predict(fit_bcm, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_bcm, main = 'Bagged causal MARS',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+
+
+
+cleanEx()
+nameEx("causalBoosting")
+### * causalBoosting
+
+flush(stderr()); flush(stdout())
+
+### Name: causalBoosting
+### Title: Fit a causal boosting model
+### Aliases: causalBoosting
+
+### ** Examples
+
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate causal boosting model
+fit_cb = causalBoosting(x, tx, y, num.trees = 500)
+pred_cb = predict(fit_cb, newx = x, num.trees = 500)
+
+# Visualize results
+plot(tx_effect, pred_cb, main = 'Causal boosting',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+
+
+
+cleanEx()
+nameEx("causalMARS")
+### * causalMARS
+
+flush(stderr()); flush(stdout())
+
+### Name: causalMARS
+### Title: Fit a causal MARS model
+### Aliases: causalMARS
+
+### ** Examples
+
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate causal MARS model
+fit_cm = causalLearning::causalMARS(x, tx, y)
+pred_cm = predict(fit_cm, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_cm, main = 'Causal MARS',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+
+
+
+cleanEx()
+nameEx("cv.causalBoosting")
+### * cv.causalBoosting
+
+flush(stderr()); flush(stdout())
+
+### Name: cv.causalBoosting
+### Title: Fit a causal boosting model with cross validation
+### Aliases: cv.causalBoosting
+
+### ** Examples
+
+# Randomized experiment example
+
+n = 100 # number of training-set patients to simulate
+p = 10  # number of features for each training-set patient
+
+# Simulate data
+x = matrix(rnorm(n * p), nrow = n, ncol = p) # simulate covariate matrix
+tx_effect = x[, 1] + (x[, 2] > 0) # simple heterogeneous treatment effect
+tx = rbinom(n, size = 1, p = 0.5) # random treatment assignment
+y = rowMeans(x) + tx * tx_effect + rnorm(n, sd = 0.001) # simulate response
+
+# Estimate causal boosting model with cross-validation
+fit_cv = causalLearning::cv.causalBoosting(x, tx, y)
+fit_cv$num.trees.min.effect # number of trees chosen by cross-validation
+pred_cv = predict(fit_cv, newx = x)
+
+# Visualize results
+plot(tx_effect, pred_cv, main = 'Causal boosting w/ CV',
+ xlab = 'True treatment effect', ylab = 'Estimated treatment effect')
+abline(0, 1, lty = 2)
+
+
+
+
+### * <FOOTER>
+###
+options(digits = 7L)
+base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+grDevices::dev.off()
+###
+### Local variables: ***
+### mode: outline-minor ***
+### outline-regexp: "\\(> \\)?### [*]+" ***
+### End: ***
+quit('no')
