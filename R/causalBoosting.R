@@ -43,7 +43,30 @@ causalBoosting = function(x, tx, y, num.trees = 500, maxleaves = 4, eps = 0.01,
   splitSpread = 0.1, x.est = NULL, tx.est = NULL, y.est = NULL,
   propensity = FALSE, stratum = NULL, stratum.est = NULL, 
   isConstVar = TRUE) {
-  
+
+ 
+  # Input sanitization
+
+  x = as.matrix(x)
+
+  if (nrow(x) != length(tx)) {
+    stop('nrow(x) does not match length(tx)')
+
+  } else if (nrow(x) != length(y)) {
+    stop('nrow(x) does not match length(y)')
+
+  } else if (!is.numeric(x)) {
+    stop('x must be numeric matrix')
+
+  } else if (!is.numeric(y)) {
+    stop('y must be numeric (use 0/1 for binary response)')
+
+  } else if (!is.numeric(tx) | length(setdiff(tx, 0:1)) > 0) {
+    stop('tx must be vector of 0s and 1s')
+
+  }
+
+ 
   # s indices are 0-based
   maxNodes = 2 * maxleaves - 1
   

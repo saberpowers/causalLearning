@@ -78,22 +78,29 @@ causalMARS = function(x, tx, y,
   propensity = FALSE, stratum = rep(1, nrow(x)), stratum.val = NULL,
   minnum = 5) {
 
-# for debugging:
-  debug = FALSE
-  
-  if (debug) {
-    maxterms = 11
-    eps = 1
-    nquant = 5
-    degree = p
-    backstep = TRUE
-    propensity = TRUE
-    # stratum = rep(1, nrow(x))
-    stratum = stratum
-    propensity = TRUE
-    minnum = 5
+
+  # Input sanitization
+
+  x = as.matrix(x)
+
+  if (nrow(x) != length(tx)) {
+    stop('nrow(x) does not match length(tx)')
+
+  } else if (nrow(x) != length(y)) {
+    stop('nrow(x) does not match length(y)')
+
+  } else if (!is.numeric(x)) {
+    stop('x must be numeric matrix')
+
+  } else if (!is.numeric(y)) {
+    stop('y must be numeric (use 0/1 for binary response)')
+
+  } else if (!is.numeric(tx) | length(setdiff(tx, 0:1)) > 0) {
+    stop('tx must be vector of 0s and 1s')
+
   }
-  
+
+
   BIG = 1e+10
   n = nrow(x)
   p = ncol(x)

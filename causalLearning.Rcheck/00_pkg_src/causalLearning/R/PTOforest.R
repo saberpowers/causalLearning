@@ -29,6 +29,29 @@ PTOforest = function(x, tx, y, pscore = rep(.5, nrow(x)),
   num.trees = 500, mtry = ncol(x), min.node.size = max(25, nrow(x) / 40),
   postprocess = TRUE, verbose = FALSE) {
 
+
+  # Input sanitization
+
+  x = as.matrix(x)
+
+  if (nrow(x) != length(tx)) {
+    stop('nrow(x) does not match length(tx)')
+
+  } else if (nrow(x) != length(y)) {
+    stop('nrow(x) does not match length(y)')
+
+  } else if (!is.numeric(x)) {
+    stop('x must be numeric matrix')
+
+  } else if (!is.numeric(y)) {
+    stop('y must be numeric (use 0/1 for binary response)')
+
+  } else if (!is.numeric(tx) | length(setdiff(tx, 0:1)) > 0) {
+    stop('tx must be vector of 0s and 1s')
+
+  }
+
+
   colnames(x) = paste('x', 1:ncol(x), sep = '')
   fit = list(x = x, pscore = pscore, postprocess = postprocess)
 
