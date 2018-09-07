@@ -142,20 +142,25 @@ double splitCriterion(double *y, int *tx, double *w, int *a, int *b, int *n)
 //    return(0);
   //  }
 
-  if (txAlen < 2 || cxAlen < 2 || txBlen < 2 || cxBlen < 2) return 0;
+  double out;
 
-  txAmean = meanWtd(txA, txAlen, txAw);
-  cxAmean = meanWtd(cxA, cxAlen, cxAw);
-  txBmean = meanWtd(txB, txBlen, txBw);
-  cxBmean = meanWtd(cxB, cxBlen, cxBw);
-  txAvar = sampVarWtd(txA, txAlen, txAmean, txAw);
-  cxAvar = sampVarWtd(cxA, cxAlen, cxAmean, cxAw);
-  txBvar = sampVarWtd(txB, txBlen, txBmean, txBw);
-  cxBvar = sampVarWtd(cxB, cxBlen, cxBmean, cxBw);
-  tauA = txAmean - cxAmean;
-  tauB = txBmean - cxBmean;
-  varA = (txAvar / txAlen) + (cxAvar/ cxAlen);
-  varB = (txBvar / txBlen) + (cxBvar/ cxBlen);
+  if (txAlen < 2 || cxAlen < 2 || txBlen < 2 || cxBlen < 2) {
+    out = 0;
+  } else {
+    txAmean = meanWtd(txA, txAlen, txAw);
+    cxAmean = meanWtd(cxA, cxAlen, cxAw);
+    txBmean = meanWtd(txB, txBlen, txBw);
+    cxBmean = meanWtd(cxB, cxBlen, cxBw);
+    txAvar = sampVarWtd(txA, txAlen, txAmean, txAw);
+    cxAvar = sampVarWtd(cxA, cxAlen, cxAmean, cxAw);
+    txBvar = sampVarWtd(txB, txBlen, txBmean, txBw);
+    cxBvar = sampVarWtd(cxB, cxBlen, cxBmean, cxBw);
+    tauA = txAmean - cxAmean;
+    tauB = txBmean - cxBmean;
+    varA = (txAvar / txAlen) + (cxAvar/ cxAlen);
+    varB = (txBvar / txBlen) + (cxBvar/ cxBlen);
+    out = fabs(tauA - tauB) / sqrt(varA + varB);
+  }
 
   free(txA);
   free(cxA);
@@ -166,7 +171,7 @@ double splitCriterion(double *y, int *tx, double *w, int *a, int *b, int *n)
   free(txBw);
   free(cxBw);
 
-  return(fabs(tauA - tauB) / sqrt(varA + varB));
+  return out;
 }
 
 
@@ -267,24 +272,6 @@ double splitCriterion_propensity(double *y, int *tx, double *w, int *a, int *b, 
       }
     }
   }
-  
-  if (fabs(varA) < eps || fabs(varB) < eps) return 0;
-
-  if (twA != 0) {
-    tauA /= twA;
-    varA /= twA * twA;
-  }
-  else {
-    return 0;
-  }
-  
-  if (twB != 0) {
-    tauB /= twB;
-    varB /= twB * twB;
-  }
-  else {
-    return 0;
-  }
 
   free(txAmean);
   free(cxAmean);
@@ -312,6 +299,24 @@ double splitCriterion_propensity(double *y, int *tx, double *w, int *a, int *b, 
   free(txBs);
   free(cxBs);
   
+  if (fabs(varA) < eps || fabs(varB) < eps) return 0;
+
+  if (twA != 0) {
+    tauA /= twA;
+    varA /= twA * twA;
+  }
+  else {
+    return 0;
+  }
+  
+  if (twB != 0) {
+    tauB /= twB;
+    varB /= twB * twB;
+  }
+  else {
+    return 0;
+  }
+
   return (fabs(tauA - tauB) / sqrt(varA + varB));
 
 
