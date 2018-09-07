@@ -102,8 +102,15 @@ double splitCriterion(double *y, int *tx, double *w, int *a, int *b, int *n)
   double txAmean, cxAmean, txBmean, cxBmean;
   double txAvar, cxAvar, txBvar, cxBvar;
   double tauA, tauB, varA, varB;
-  double txA[*n], cxA[*n], txB[*n], cxB[*n];
-  double txAw[*n], cxAw[*n], txBw[*n], cxBw[*n];
+  int nn = *n;
+  double *txA = (double *)malloc(nn * sizeof(double));
+  double *cxA = (double *)malloc(nn * sizeof(double));
+  double *txB = (double *)malloc(nn * sizeof(double));
+  double *cxB = (double *)malloc(nn * sizeof(double));
+  double *txAw = (double *)malloc(nn * sizeof(double));
+  double *cxAw = (double *)malloc(nn * sizeof(double));
+  double *txBw = (double *)malloc(nn * sizeof(double));
+  double *cxBw = (double *)malloc(nn * sizeof(double));
   int txAlen, cxAlen, txBlen, cxBlen, i;
   txAlen = 0;
   cxAlen = 0;
@@ -149,6 +156,16 @@ double splitCriterion(double *y, int *tx, double *w, int *a, int *b, int *n)
   tauB = txBmean - cxBmean;
   varA = (txAvar / txAlen) + (cxAvar/ cxAlen);
   varB = (txBvar / txBlen) + (cxBvar/ cxBlen);
+
+  free(txA);
+  free(cxA);
+  free(txB);
+  free(cxB);
+  free(txAw);
+  free(cxAw);
+  free(txBw);
+  free(cxBw);
+
   return(fabs(tauA - tauB) / sqrt(varA + varB));
 }
 
@@ -157,14 +174,35 @@ double splitCriterion_propensity(double *y, int *tx, double *w, int *a, int *b, 
                                  int *s, int *ns, int *isConstVar)
 // s should be 0-based
 {
-  double txAmean[*ns], cxAmean[*ns], txBmean[*ns], cxBmean[*ns];
-  double txAvar[*ns], cxAvar[*ns], txBvar[*ns], cxBvar[*ns];
-  double txAtotw[*ns], cxAtotw[*ns], txBtotw[*ns], cxBtotw[*ns];
+  double *txAmean = (double *)malloc((*ns) * sizeof(double));
+  double *cxAmean = (double *)malloc((*ns) * sizeof(double));
+  double *txBmean = (double *)malloc((*ns) * sizeof(double));
+  double *cxBmean = (double *)malloc((*ns) * sizeof(double));
+  double *txAvar = (double *)malloc((*ns) * sizeof(double));
+  double *cxAvar = (double *)malloc((*ns) * sizeof(double));
+  double *txBvar = (double *)malloc((*ns) * sizeof(double));
+  double *cxBvar = (double *)malloc((*ns) * sizeof(double));
+  double *txAtotw = (double *)malloc((*ns) * sizeof(double));
+  double *cxAtotw = (double *)malloc((*ns) * sizeof(double));
+  double *txBtotw = (double *)malloc((*ns) * sizeof(double));
+  double *cxBtotw = (double *)malloc((*ns) * sizeof(double));
   double tauA = 0, tauB = 0, varA = 0, varB = 0;
   double twA = 0, twB = 0;
-  double txA[*n], cxA[*n], txB[*n], cxB[*n];
-  double txAw[*n], cxAw[*n], txBw[*n], cxBw[*n];
-  int txAs[*n], cxAs[*n], txBs[*n], cxBs[*n];
+
+  int nn = *n;
+  double *txA = (double *)malloc(nn * sizeof(double));
+  double *cxA = (double *)malloc(nn * sizeof(double));
+  double *txB = (double *)malloc(nn * sizeof(double));
+  double *cxB = (double *)malloc(nn * sizeof(double));
+  double *txAw = (double *)malloc(nn * sizeof(double));
+  double *cxAw = (double *)malloc(nn * sizeof(double));
+  double *txBw = (double *)malloc(nn * sizeof(double));
+  double *cxBw = (double *)malloc(nn * sizeof(double));
+  int *txAs = (int *)malloc(nn * sizeof(int));
+  int *cxAs = (int *)malloc(nn * sizeof(int));
+  int *txBs = (int *)malloc(nn * sizeof(int));
+  int *cxBs = (int *)malloc(nn * sizeof(int));
+
   int txAlen = 0, cxAlen = 0, txBlen = 0, cxBlen = 0;
   
   for (int i = 0; i < *n; i++) {
@@ -247,6 +285,32 @@ double splitCriterion_propensity(double *y, int *tx, double *w, int *a, int *b, 
   else {
     return 0;
   }
+
+  free(txAmean);
+  free(cxAmean);
+  free(txBmean);
+  free(cxBmean);
+  free(txAvar);
+  free(cxAvar);
+  free(txBvar);
+  free(cxBvar);
+  free(txAtotw);
+  free(cxAtotw);
+  free(txBtotw);
+  free(cxBtotw);
+
+  free(txA);
+  free(cxA);
+  free(txB);
+  free(txB);
+  free(txAw);
+  free(cxAw);
+  free(txBw);
+  free(cxBw);
+  free(txAs);
+  free(cxAs);
+  free(txBs);
+  free(cxBs);
   
   return (fabs(tauA - tauB) / sqrt(varA + varB));
 
@@ -333,11 +397,12 @@ int findUnique(int *u, int n) {
 // consider every splitSpread * nn points to the left node
 void findBestSplit(double *X, double *y, int *tx, double *w, int *order,
  int *n, int *q, int *leaf, int *leaf_var, double *leaf_val, double *leaf_criterion,
- int *node, int *variable, double *value, double *objective, double *splitSpread)
-{
+ int *node, int *variable, double *value, double *objective, double *splitSpread) {
 
   int nn = *n;
-  int uniqueLeaf[nn];
+
+  int *uniqueLeaf = (int *)malloc(nn * sizeof(int));
+  // int uniqueLeaf[nn];
   memcpy(uniqueLeaf, leaf, nn * sizeof(int));
   int numLeaves = findUnique(uniqueLeaf, nn);
   
@@ -353,7 +418,8 @@ void findBestSplit(double *X, double *y, int *tx, double *w, int *order,
       valueMax[k] = leaf_val[currLeaf];
     }
     else {
-      double wk[nn];
+      double *wk = (double *)malloc(nn * sizeof(double));
+      // double wk[nn];
       int currSize = 0;
       memcpy(wk, w, nn * sizeof(double));
       for (int i = 0; i < nn; ++i) {
@@ -435,6 +501,7 @@ void findBestSplit(double *X, double *y, int *tx, double *w, int *order,
       leaf_criterion[currLeaf] = criterionMax[k];
       leaf_var[currLeaf] = variableMax[k];
       leaf_val[currLeaf] = valueMax[k];
+      free(wk);
     }
   }
 
@@ -459,6 +526,7 @@ void findBestSplit(double *X, double *y, int *tx, double *w, int *order,
    *node = NA_INTEGER;
   }
 
+  free(uniqueLeaf);
   // end = clock();
   // *cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 }
@@ -568,7 +636,7 @@ void findBestSplit_propensity(double *X, double *y, int *tx, double *w,
  int *node, int *variable, double *value, double *objective, double *splitSpread)
 {
   int nn = *n;
-  int uniqueLeaf[nn];
+  int *uniqueLeaf = (int *)malloc(nn * sizeof(int));
   memcpy(uniqueLeaf, leaf, nn * sizeof(int));
   int numLeaves = findUnique(uniqueLeaf, nn);
   
@@ -584,7 +652,7 @@ void findBestSplit_propensity(double *X, double *y, int *tx, double *w,
       valueMax[k] = leaf_val[currLeaf];
     }
     else {
-      double wk[nn];
+      double *wk = (double *)malloc(nn * sizeof(double));
       memcpy(wk, w, nn * sizeof(double));
       int currSize = 0;
       for (int i = 0; i < nn; ++i) {
@@ -668,6 +736,7 @@ void findBestSplit_propensity(double *X, double *y, int *tx, double *w,
       leaf_criterion[currLeaf] = criterionMax[k];
       leaf_var[currLeaf] = variableMax[k];
       leaf_val[currLeaf] = valueMax[k];
+      free(wk);
     }
   }
 
@@ -691,6 +760,7 @@ void findBestSplit_propensity(double *X, double *y, int *tx, double *w,
     *objective = criterionMax[optIdx];
     *node = uniqueLeaf[optIdx];
   }
+  free(uniqueLeaf);
 }
 
 /* **********************************************************/
@@ -873,7 +943,9 @@ void bestSplitTree(double *X, double *y, int *tx,
     *ns = -1;  // = to R NULL
   }
 
-  double w[*n], we[*ne];
+
+  double *w = (double *)malloc((*n) * sizeof(double));
+  double *we = (double *)malloc((*ne) * sizeof(double));
   for (int i = 0; i < *n; ++i) {
     w[i] = 1;
   }
@@ -905,7 +977,8 @@ void bestSplitTree(double *X, double *y, int *tx,
   //   }
   // }
 
-  int order[(*p) * (*n)];  // here order starts from 0
+  int *order = (int *)malloc((*p) * (*n) * sizeof(int));
+  // int order[(*p) * (*n)];  // here order starts from 0
   for (int j = 0; j < *p; ++j) {
     order_index_double(X + j * (*n), order + j * (*n), *n);
   }
@@ -913,8 +986,15 @@ void bestSplitTree(double *X, double *y, int *tx,
   int kSplits = 0;
   int ell;
 
-  int leaf[*n], leafe[*ne], leaf_var[*n];
-  double leaf_val[*n], leaf_criterion[*n];
+  int *leaf = (int *)malloc((*n) * sizeof(int));
+  int *leafe = (int *)malloc((*ne) * sizeof(int));
+  int *leaf_var = (int *)malloc((*n) * sizeof(int));
+
+  double *leaf_val = (double *)malloc((*n) * sizeof(double));
+  double *leaf_criterion = (double *)malloc((*n) * sizeof(double));
+
+  // int leaf[*n], leafe[*ne], leaf_var[*n];
+  // double leaf_val[*n], leaf_criterion[*n];
 //  double pred[*n * 2];
 //  double cost[*n];
 //  int var[*n], left[*n], right[*n];
@@ -948,7 +1028,8 @@ void bestSplitTree(double *X, double *y, int *tx,
 
 
     if (ell == -1 || ell == NA_INTEGER) {
-      int uniqueLeaves[*n];
+      int *uniqueLeaves = (int *)malloc((*n) * sizeof(int));
+      // int uniqueLeaves[*n];
       for (int i = 0; i < *n; ++i) {
         uniqueLeaves[i] = leaf[i];
       }
@@ -984,6 +1065,7 @@ void bestSplitTree(double *X, double *y, int *tx,
           }
         }
       }
+      free(uniqueLeaves);
       break;
     }
 
@@ -1064,6 +1146,14 @@ void bestSplitTree(double *X, double *y, int *tx,
   // }
   // return tree;
 
+  free(w);
+  free(we);
+  free(order);
+  free(leaf);
+  free(leafe);
+  free(leaf_var);
+  free(leaf_val);
+  free(leaf_criterion);
 }
 
 
@@ -1118,8 +1208,9 @@ void causalBoosting(double *X, double *y, int *tx,
 
   int maxNodes = 2 * (*maxLeaves) - 1;
 
-  double r[*n];
-  double re[*ne];
+  double *r = (double *)malloc((*n) * sizeof(double));
+  double *re = (double *)malloc((*ne) * sizeof(double));
+
   // *y0bar = meanByFactor(y, tx, 0, *n);
   // *y1bar = meanByFactor(y, tx, 1, *n);
   
@@ -1177,8 +1268,12 @@ void causalBoosting(double *X, double *y, int *tx,
                   pred0 + k * maxNodes, pred1 + k * maxNodes, cost + k * maxNodes,
                   pred0e + k * maxNodes, pred1e + k * maxNodes);
 
-    double fitted0[*n], fitted1[*n];
-    double fitted0e[*n], fitted1e[*ne];
+
+    double *fitted0 = (double *)malloc((*n) * sizeof(double));
+    double *fitted1 = (double *)malloc((*n) * sizeof(double));
+    double *fitted0e = (double *)malloc((*ne) * sizeof(double));
+    double *fitted1e = (double *)malloc((*ne) * sizeof(double));
+
 
     predictTree(X, n, fitted0, fitted1, 
                 var + k * maxNodes, val + k * maxNodes, left + k * maxNodes, right + k * maxNodes, 
@@ -1223,5 +1318,11 @@ void causalBoosting(double *X, double *y, int *tx,
         // err[k] += (tauhat[*n * k + i] - *vtxeff) * (tauhat[*n * k + i] - *vtxeff);
       }
     }
+    free(fitted0);
+    free(fitted1);
+    free(fitted0e);
+    free(fitted1e);
   }
+  free(r);
+  free(re);
 }
