@@ -289,7 +289,7 @@ double splitCriterion_propensity(double *y, int *tx, double *w, int *a, int *b, 
   free(txA);
   free(cxA);
   free(txB);
-  free(txB);
+  free(cxB);
   free(txAw);
   free(cxAw);
   free(txBw);
